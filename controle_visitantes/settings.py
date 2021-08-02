@@ -41,7 +41,8 @@ INSTALLED_APPS = [
 
 INSTALLED_APPS += [
     'usuarios',
-    'porteiros'
+    'porteiros',
+    'visitantes',
 ]
 
 
