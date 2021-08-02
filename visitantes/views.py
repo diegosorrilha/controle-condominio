@@ -1,5 +1,8 @@
 from django.shortcuts import render
 
-def t(request):
+
+def registrar_visitante(request):
     context = {}
+
+    return render(request, 'registrar_visitante.html', context)
 
