@@ -19,6 +19,18 @@
                 </small>
             </p>
 
+            {% if form.errors %}
+                {% for field in form %}
+                    {% if field.errors %}
+                        {% for erro in field.errors %}
+                            <div class="alert alert-warning" role="alert">
+                                {{ erro }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+
             <form method="POST" action="">
                 <div class="form-row">
                     {% csrf_token %}
@@ -29,6 +41,11 @@
                             {% render_field field placeholder=field.label class="form-control" %}
                         </div>
                     {% endfor %}
+                </div>
+                <div class="text-right">
+                    <button class="btn btn-primary" type="sumbit">
+                        <span class="text">Registrar visitante</span>
+                    </button>
                 </div>
             </form>
         </div>

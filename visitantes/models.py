@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Visitante(models.Model):
     nome_completo = models.CharField(
         verbose_name='Nome completo',
@@ -22,7 +23,7 @@ class Visitante(models.Model):
     )
 
     placa_veiculo = models.CharField(
-        verbose_name='Número da casa a ser visitada',
+        verbose_name='Número da placa do veiculo',
         max_length=7,
         blank=True,
         null=True
